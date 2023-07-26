@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>NODEJS  INTERVIEW QUESTIONS</title>
+</head>
+
+<body>
+
+     
+    <h1>DAY ONE</h1>
+    <h3>
+        Q1. What is node.js ?
+    </h3>
+    <h4>Ans.</h4>
+    <pre>
+        * Node.js is an open-source JavaScript runtime built on Chrome's V8 engine. 
+
+        * It allows running JavaScript code outside the browser, making it great 
+          for server-side applications.
+
+        *  Key features: asynchronous, non-blocking, 
+                         NPM for package management, 
+                         cross-platform, 
+                         ideal for real-time apps, 
+                         and command-line tools.
+    </pre>
+
+
+    <h2>
+      CROSS QUESTIONS ;-
+   </h2>
+   <h4>No-1 :- Open-Source Cross-Platform: </h4>
+   <pre>
+        * Open-source refers to software that comes with its source code freely available to the public. 
+          This means that anyone can view, modify, and distribute the code.
+
+        * Cross-platform means that the software can run on multiple operating systems, like
+          Windows, macOS, or Linux, without needing major changes.
+
+        * So, when we say "open-source cross-platform," it means the software is freely available,
+          and it can work on different types of computers.
+   </pre>
+   <h4>No-2 :- Blocking vs. Non-Blocking: </h4>
+   <pre>
+        *Blocking: When something is blocking, it means that a task or operation makes the program 
+                   wait until it's finished before moving on to the next task.
+        
+        *Non-Blocking: On the other hand, non-blocking means that a task or operation allows 
+                       the program to continue with other things while waiting for a certain task to complete.
+   </pre>
+    <br>
+    <h3>Q2. What is NPM ?</h3>
+    <h4>Ans.</h4>
+    <pre>
+        * NPM is called the "Node Package Manager".
+
+        * It allows installing packages, handling dependencies, and publishing 
+          packages for others to use.
+
+        * developers manage and share JavaScript code libraries easily.
+    </pre>
+    <br>
+    <h3>Q3. What are the modules in Node.js?</h3>
+    <h4>Ans.</h4>
+    <pre>
+         * Modules are reusable blocks of code and functionality that use in our project .
+
+         * It can be easily imported and used in other parts of a Node.js application.
+
+         * Three types Modules :- Core Modules: These are built-in modules that come bundled with Node.js.
+
+                                  Local Modules: These are custom modules created by developers.
+
+                                  Third-party Modules: These are external modules developed by the Node.
+    </pre>
+    <h2>
+      CROSS QUESTIONS ;-
+   </h2>
+    <h4>No-1 :- What is EXPORT, IMPORT, REQUIRE Keyword? </h4>
+
+    <pre>
+         * EXPORT is used to make things available for other modules to use.
+
+             EX:
+             const myFunction = () => {};
+             const myVariable = 42;
+            
+             module.exports = {
+              myFunction,
+              myVariable,
+            };
+
+         * IMPORT is not a direct keyword but is  using the 
+           REQUIRE function to import functionality from other modules.
+
+           EX:
+           const myModule = require('./myModule');
+
+           myModule.myFunction();
+           console.log(myModule.myVariable);
+
+         * REQUIRE is used to include external modules or libraries into your Node.js code, 
+           allowing you to access their functionality.
+
+           EX:
+           const fs = require('fs'); Node.js module 'fs'
+           const express = require('express'); 'express'
+    </pre>
+    <br>
+    <h3>Q4.What is the purpose of the module.exports?</h3>
+    <h4>Ans.</h4>
+    <pre>
+      * The module.exports object serves as a path between 
+        different modules, allowing them to share functionality and data 
+        with each other.
+
+      *  It define what should be exported from the module and made available for other 
+         parts of the application that require the module.
+    </pre>
+    <br>
+    <h3>Q5. Difference between default export and named export</h3>
+    <h4>Ans.</h4>
+    <pre>
+      * Default Export:
+                       A module can have only one default export.
+					   
+                       It is used when a module wants to export a 
+					             single value or function as its default export.
+					   
+                       When another module imports the default export, 
+			                 it can choose to give it any name during the import.
+      *  Named Export: 
+                      A module can have multiple named exports.
+                      
+                      It is used when a module wants to export multiple 
+					           functions, objects, or variables from the same file, 
+					           and each of them can be accessed individually in the 
+					           importing module.
+    </pre>
+    <br>
+    <h3>Q6.How do you import any module in Node.js</h3>
+    <h4>Ans.</h4>
+    <pre>
+      * In Node.js, you can import modules using the require function.
+      * The require function is built into Node.js and allows you to load modules 
+        into your application, making their functionality available for use.
+
+        EX :- const fs = require('fs');
+    </pre>
+    <br>
+    <h3>Q7. Difference between HTTP and HTTPS</h3>
+    <h4>Ans.</h4>
+    <pre>
+      * HTTP (Hypertext Transfer Protocol):
+                                           1: HTTP is commonly used for websites that do not 
+                                              handle sensitive information or where security 
+                                           2: Due to the lack of encryption, information HTTP is
+                                              allows having security threats like data theft and tampering.
+                                              
+      * HTTPS (Hypertext Transfer Protocol Secure):
+                                           1: HTTPS is a secure version of HTTP.
+                                           2: Due to heavy encryption, information HTTP is
+                                              making it difficult for hackers to tamper with the data.
+    </pre>
+    <br>
+    <h3>Q8.What is Express. how it helps you to create a backend application, Advantages of using express.</h3>
+    <h4>Ans.</h4>
+    <pre>
+        * It designed to help developers build backend applications easily and efficiently.
+
+        * It provides a set of tools and features that simplify the process of handling web requests and building APIs.
+
+        * Advantages of using Express:
+                                     1. Simple and Lightweight: Express has a minimalistic and straightforward design, making it easy to learn and use. 
+
+                                     2. Middleware Support: Express comes with a vast collection of middleware that can be easily integrated into applications.
+
+                                     3. Routing: Express offers a clean and intuitive routing system, making it simple to handle different HTTP methods GET, POST, etc.
+    </pre>
+<br>
+    <h3>Q9. What are the different types of HTTP requests?</h3>
+    <h4>Ans. Basicaly we use this requests</h4>
+    <pre>
+        1. GET: Used to retrieve data from a server; a read-only request.
+
+        2. POST: Used to send data to a server to create or update resources.
+
+        3. PUT: Used to update existing resources on the server.
+
+        4. DELETE: Used to remove a resource from the server.
+        
+        5. PATCH: Used to apply partial modifications to a resource.
+
+    </pre>
+</body>
+
+</html>

@@ -32,7 +32,7 @@
 
 
     <h2>
-      CROSS QUESTIONS ;-
+      CROSS QUESTIONS :-
    </h2>
    <h4>No-1 :- Open-Source Cross-Platform: </h4>
    <pre>
@@ -197,6 +197,118 @@
         5. PATCH: Used to apply partial modifications to a resource.
 
     </pre>
+
+    <h1>DAY TWO</h1>
+    <h3>Q1.Explain min 5 status codes gets used in Backend development</h3>
+    <h4>Ans. 5 status codes gets used in Backend development </h4>
+    <pre>
+      * 200 "OK/SUCCESSFUL" : It is returned when the request was successful, and the server successfully processed the requested data.
+
+      * 400 "BAD REQUEST" : This status code is returned when the server cannot understand the request due to client error.
+
+      * 401 "UNAUTHORIZED" : The HTTP status code 401 Unauthorized indicates that the request requires user authentication. 
+
+      * 404 "SERVER NOT FOUND" : It is commonly used when a client tries to access a URL that does not exist.
+
+      * 500 "Internal Server Error" : This status code indicates that there was an error on the server that prevented it from fulfilling the request. 
+    </pre>
+    <br>
+      <h3>Q2. Explain CORS </h3>
+      <h4>Ans. CORS (Cross-Origin Resource Sharing): </h4>
+      <pre>
+        * CORS is a security feature implemented by web browsers that restricts web pages from making requests to a different domain.
+
+        * This is a crucial security measure to prevent unauthorized access to resources on different domains. 
+
+        * It is a client-side mechanism implemented in browsers and is not specific to backend development.
+      </pre>
+      <br>
+      <h3>Q3. Implement CORS.</h3>
+      <h4>Ans. Implementing CORS in Node.js (using Express.js):</h4>
+      <pre>
+        step-01 : npm install cors
+
+        step-02 : const express = require('express');
+                  const cors = require('cors');
+        
+                  const app = express();
+                  app.use(cors());
+
+                  app.listen(3000, ()=>{
+                    ole.log(`Server is running on 3000);
+                  });
+      </pre>
+      <br>
+      <h3>Q4. How do you create a simple Express.js application?</h3>
+      <h4>Ans. Creating a simple Express.js application:</h4>
+      <pre>
+            step-01 : npm install express
+
+            step-02 : const express = require('express');
+                      const app = express();
+
+                      app.get('/', (req, res) => {
+                        res.send('Hello, Express!');
+                      });
+
+                      app.listen(3000, () => {
+                        console.log(`Server is running on 3000`);
+                      });
+
+      </pre>
+      <br>
+      <h3>Q5. Explain the concept of middleware in Node.js.</h3>
+      <h4>Ans. Middleware in Node.js:</h4>
+      <pre>
+            * Middleware in Node.js refers to functions that have access to the request and response objects in an Express.js application's request-response cycle. 
+
+            * Middleware functions can perform various tasks such as logging, authentication, data parsing, error handling, and more. 
+
+            * They are executed sequentially, and each middleware has the option to either handle the request or pass it to the next middleware in the chain.
+      </pre>
+      <h2>
+        CROSS QUESTIONS :-
+     </h2>
+     <h3> Types of middleware</h3>
+     <h4>Ans. Generally we use 3 types</h4>
+     <pre>
+         * Application-level middleware: These are middleware functions that are defined at the application level and are 
+                                         executed for every incoming request.( "app.use()")
+
+                                        
+         * Router-level middleware: Router-level middleware is specific to a particular route or group of routes defined 
+                                    by an Express Router. ("router.use()") 
+
+         * Error-handling middleware: These middleware functions are used to handle errors that may occur during the 
+                                      request-response cycle. ("app.use() or router.use()")
+     </pre>
+     <br>
+     <h3>Q6. Create a middleware which will be applicable to all the routes</h3>
+     <h4>Ans.</h4>
+     <pre>
+      const express = require('express');
+      const app = express();
+      
+      
+      app.use((req, res, next) => {
+        console.log('Middleware executed for every route.');
+        next();
+      });
+      
+      app.get('/', (req, res) => {
+        res.send('Hello, Express!');
+      });
+      
+      app.get('/about', (req, res) => {
+        res.send('This is the About page.');
+      });
+      
+      app.listen(3000, () => {
+        console.log(`Server is running on 3000`);
+      });
+     </pre>
+
+   
 </body>
 
 </html>
